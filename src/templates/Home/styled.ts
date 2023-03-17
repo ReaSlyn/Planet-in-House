@@ -1,25 +1,45 @@
 import styled from 'styled-components'
 
-import Icon from '../../components/Icon'
+import { InputBase } from '@material-ui/core'
 
-export const Content = styled.div`
-  flex-grow: 1;
-  background-color: ${(props) => props.theme.palette.colors.black};
-  ${(props) => props.theme.breakpoints.up('md')} {
-    flex-grow: initial;
-  }
-`
-
-export const Title = styled.h3`
-  ${(props) => ({ ...props.theme.typography.h3 })}
+export const Title = styled.h1`
+  ${(props) => ({ ...props.theme.typography.h1 })}
   color: ${(props) => props.theme.palette.colors.pureWhite};
-  margin: 0rem 0 0.5rem 0;
+  text-align: center;
+  margin-bottom: 40px;
 `
 
-export const Text = styled.p`
-  ${(props) => ({ ...props.theme.typography.smallRegular })}
-  color: ${(props) => props.theme.palette.colors.chambray};
-  margin: 0rem 0 1rem 0;
+export const InputContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 40px;
 `
 
-export const IconContainer = styled(Icon)``
+export const Label = styled.label`
+  ${(props) => ({ ...props.theme.typography.largeRegular })}
+  color: ${(props) => props.theme.palette.colors.pureWhite};
+`
+
+export const Input = styled(InputBase)((props) => ({
+  '& .MuiInputBase-input': {
+    borderRadius: 8,
+    backgroundColor: props.theme.palette.colors.darkGrey,
+    color: props.theme.palette.colors.pureWhite,
+    border: '1px solid ' + props.theme.palette.colors.borderGrey,
+    fontSize: 18,
+    width: '100%',
+    padding: '18.5px 16px',
+    transition: props.theme.transitions.create(['border-color']),
+    fontFamily: 'Lato',
+    '&:focus': {
+      borderColor: props.theme.palette.colors.lightBlue,
+    },
+  },
+}))
+
+export const PlanetCardContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+`

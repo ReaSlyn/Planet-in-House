@@ -11,7 +11,7 @@ export default defaultExport({
   component: Layout,
   parameters: {
     backgrounds: {
-      default: 'light',
+      default: 'black',
     },
   },
 })

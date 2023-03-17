@@ -58,7 +58,7 @@ const withContainerStyle = (Story, context) => {
   }
 }
 
-import { MemoryRouter } from 'react-router'
+import { MemoryRouter } from 'react-router-dom'
 
 import getTheme from '../src/theme'
 

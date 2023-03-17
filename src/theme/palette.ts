@@ -5,7 +5,10 @@ const colors = {
   midnightBlue: '#1D286A',
   tomato: '#FF5E4D',
   freeSpeechBlue: '#3F50B5',
-  grey: '#888888',
+  grey: '#CACACA',
+  textGrey: '#8D8D8D',
+  borderGrey: '#5C5858',
+  darkGrey: '#2B2B2D',
   kournikova: '#FFCB48',
   kournikovaLight: chroma('#FFCB48').alpha(0.4).hex(),
   transparentBlue: '#F0F8FF',
@@ -20,7 +23,6 @@ const colors = {
   ghostWhite: '#F1F3FF',
   lightBlue: '#479DF1',
   echoBlue: '#A4A9C3',
-  black: '#161619',
 }
 
 export const light: PaletteOptions & { colors: typeof colors } = {
@@ -51,8 +53,8 @@ export const light: PaletteOptions & { colors: typeof colors } = {
   colors,
   divider: 'rgba(0, 0, 0, 0.12)',
   background: {
-    paper: '#fff',
-    default: '#fff',
+    paper: '#161619',
+    default: '#161619',
     level2: '#f5f5f5',
     level1: '#fff',
     footer: '#1b1642',

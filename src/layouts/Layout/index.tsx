@@ -3,6 +3,8 @@ import cx from 'classnames'
 
 import * as SC from './styled'
 
+import { Icons } from '../../components/Icon/types'
+
 export type LayoutProps = {
   className?: string
   header?: React.ReactNode
@@ -14,9 +16,15 @@ const Layout: FC<LayoutProps> = (props) => {
 
   return (
     <SC.Container className={cx(className)}>
-      <>{header}</>
-      {children}
-      <>{footer}</>
+      <SC.Content>
+        <SC.LogoLink to="/" style={{ maxWidth: '220px' }}>
+          <SC.IconContainer icon={Icons.logo} />
+        </SC.LogoLink>
+
+        <>{header}</>
+        {children}
+        <>{footer}</>
+      </SC.Content>
     </SC.Container>
   )
 }

@@ -4,6 +4,7 @@ import { Paper } from '@material-ui/core'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { StylesProvider, ThemeProvider } from '@material-ui/core/styles'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
+import { GlobalStyles } from './theme/global'
 
 import getTheme from '../src/theme'
 
@@ -39,9 +40,14 @@ const App: FC = (props) => {
   return (
     <React.Fragment>
       <HelmetProvider>
-        <Helmet defaultTitle="PlanetPlaza in House">{gtmScript}</Helmet>
+        <Helmet defaultTitle="Planet in House">
+          {gtmScript}
+          <link rel="canonical" href="/" />
+          <meta name="robots" content="index, follow" />
+        </Helmet>
         <StylesProvider injectFirst>
           <StyledThemeProvider theme={getTheme()}>
+            <GlobalStyles />
             <ThemeProvider theme={getTheme()}>
               <CssBaseline />
               <Paper elevation={0}>{children}</Paper>

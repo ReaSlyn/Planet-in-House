@@ -18,7 +18,6 @@ const typography: TypographyOptions = {
     fontSize: '2.8rem',
     fontWeight: 500,
     lineHeight: 1.25,
-    textTransform: 'uppercase',
   },
   h3: {
     fontFamily: 'Poppins, serif',
@@ -57,23 +56,23 @@ const typography: TypographyOptions = {
     lineHeight: '160%',
   },
   body2: {
-    fontFamily: 'Poppins, sans-serif',
+    fontFamily: 'Lato, sans-serif',
     fontSize: '1.2rem',
   },
   callToAction: {
-    fontFamily: 'Poppins, sans-serif',
+    fontFamily: 'Lato, sans-serif',
     fontSize: '1.4rem',
     fontWeight: 600,
     lineHeight: 1.25,
   },
   largeRegular: {
-    fontFamily: 'Poppins',
+    fontFamily: 'Lato',
     fontSize: '1.8rem',
     fontWeight: 400,
     lineHeight: 1.6,
   },
   largeBold: {
-    fontFamily: 'Poppins',
+    fontFamily: 'Lato',
     fontSize: '1.8rem',
     fontWeight: 600,
     lineHeight: 1.6,
